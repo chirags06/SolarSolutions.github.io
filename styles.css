@@ -52,7 +52,7 @@ html {
 /* Header + Hero Section */
 .hero-section {
     top: auto;
-    width: auto;
+    width: 100%;
     height: 100vh;
     background: url(CloudsBG.png) no-repeat 100% 100%;
     background-size: cover;
@@ -68,6 +68,7 @@ li, a, button {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
@@ -101,7 +102,7 @@ header {
 
 button {
     padding: 10px 25px;
-    background: #4B92FF;
+    background: #3D73DD;
     opacity: 95%;
     color: #F5F5F5;
     border: #4B92FF solid 1px;
@@ -111,11 +112,41 @@ button {
 }
 
 button:hover {
-    background: #F5F5F5;
-    color: #4B92FF;
-    border: #4B92FF solid 1px;
+    background: #E4ECFF;
+    color: #3D73DD;
+    border: #3D73DD solid 1px;
     border-radius: 45px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    #navbar-logo {
+        display: none;
+    }
+
+    .nav-links li {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0px 10px;
+    }
+    
+    .nav-links li a {
+        transition: all 0.3s ease 0s;
+        font-size: 12px;
+    }
+    
+    button {
+        padding: 10px 25px;
+        font-size: 12px;
+        background: #3D73DD;
+        opacity: 95%;
+        color: #F5F5F5;
+        border: #4B92FF solid 1px;
+        border-radius: 45px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
 }
 
 .hero-section-content {
@@ -139,6 +170,32 @@ button:hover {
     font-size: 3.5rem;
     font-weight: 600;
     color: #F5F5F5;
+}
+
+@media screen and (max-width: 1250px) {
+    .hero-section-content {    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px 195px 0px;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .hero-section-content h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #F5F5F5;
+    }
+
+    .hero-section-content h1 {
+        font-size: 5rem;
+        font-weight: 800;
+        color: #F5F5F5;
+    }
+
 }
 
 .scroll-prompt {
@@ -189,6 +246,7 @@ button:hover {
 .solutions-container {
     background-color: #F9F9FF;
     height: 90vh;
+    width: 100%;
 }
 
 .solutions-section-line {
@@ -219,6 +277,7 @@ button:hover {
 }
 
 .solutions-section {
+    width: 100%;
     height: 85vh;
     display: flex;
     align-items: center;
@@ -319,6 +378,34 @@ button:hover {
     background: url("ThinPanels.jpg");
 }
 
+
+@media screen and (max-width: 1250px) {
+    .solutions-heading h4{
+        background-color: #F9F9FF;
+        color: #1A202C;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        font-size: 2.188rem;
+        font-weight: 400;
+    }
+
+    .solutions-container {
+        background-color: #F9F9FF;
+        height: 220vh;
+        width: 100%;
+    }
+
+    .solutions-section {
+        height: 210vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+        overflow: hidden;
+    }
+}
+
 /* Mission Section */
 .our-mission {
     background: #FFFFFF;
@@ -327,6 +414,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     height: 90vh;
+    width: 100%;
 }
 
 .our-mission-container {
@@ -374,25 +462,50 @@ button:hover {
 }
 
 .our-mission-content p {
-    margin-top: 0.5rem;
-    margin-bottom: 0rem;
+    width: 100%;
+    max-width: 435px;
+    padding-top: 0.5rem;
+    line-height: 1.85;
     font-size: 1.125;
     font-weight: 350;
     color: #718096;
 }
 
-.our-mission-image-container {
-    margin-top: 1.45rem;
-    margin-left: 8.5%;
-    text-align: center;
-}
-
 #our-mission-image {
-    height: 115%;
-    width: 115%;
+    height: 100%;
+    width: 100%;
     border-radius: 15px;
 }
 
+@media screen and (max-width: 1250px) {
+    .our-mission {
+        background: #FFFFFF;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .our-mission-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        height: 90vh;
+        width: 100%;
+        max-width: 1500px;
+        padding: 0 150px;
+    }
+
+    #our-mission-image {
+        height: 115%;
+        width: 115%;
+        border-radius: 15px;
+    }
+}
 /* ExtraInfo */
 
 /* Development Section */
@@ -403,6 +516,8 @@ button:hover {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .development-section-line {
@@ -443,6 +558,8 @@ button:hover {
 }
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
     align-self: center;
     justify-self: center;
     width: 1230px;
@@ -455,7 +572,7 @@ button:hover {
     height: 0px;
     left: 0px;
     top: 204px;
-    position: absolute;
+    position: relative;
     border: 2px #4B92FF solid;
 }
 
@@ -471,7 +588,8 @@ button:hover {
 }
 
 .feature-box {
-    width: 299px;
+    max-width: 299px;
+    width: 100%;
     height: 159px;
     position: absolute;
     background: white;
@@ -480,7 +598,8 @@ button:hover {
 }
 
 .feature-content {
-    width: 245px;
+    max-width: 245px;
+    width: 100%;
     height: 111px;
     left: 21px;
     top: 22px;
@@ -534,9 +653,16 @@ button:hover {
     position: absolute;
 }
 
+@media screen and (max-width: 1250px) {
+    .development-section {
+        display: none;
+    }
+}
+
 /* Tax Map */
 .staterebate-section {
     height: 90vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -561,7 +687,6 @@ button:hover {
 }
 
 .staterebate-section h4{
-    background-color: #FFFFFF;
     color: #1A202C;
     text-align: center;
     align-self: center;
@@ -580,8 +705,35 @@ button:hover {
 }
 
 .mapdiv {
-    width: 28%;
-    padding-top: 7.5%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 3.5%;
+}
+
+@media screen and (max-width: 1250px) {
+
+    .staterebate-section {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: #f9f9ff;
+    }
+
+    .mapdiv {
+        background-color: #f9f9ff;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        padding: 6.5%;
+    }
 }
 
 /* FinalCTA Section */
@@ -591,6 +743,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     background-image: url(DarkSolarPanel.jpg);
+    background-size: cover; 
 }
 
 .finalCTA-container {
@@ -635,6 +788,18 @@ textarea {
     background-color: #142D55;
 }
 
+@media screen and (max-width: 1250px) {
+    .finalCTA-container {
+        width: 450px;
+        padding: 45px;
+        border-radius: 1px solid #EEEEEE;
+        border-radius: 10px;
+        background-color: #F5F5F5;
+        display: grid;
+        place-items: center;
+    }
+}
+
 /* Footer Section */
 .footer-container {
     background-color: #00001C;
@@ -668,9 +833,6 @@ textarea {
 
 .footer-link-items h2 {
     margin-bottom: 16px;
-}
-
-.footer-link-items > h2 {
     color: #F5F5F5;
 }
 
@@ -733,4 +895,24 @@ textarea {
 
 .website-rights {
     color: #F5F5F5;
+}
+
+@media screen and (max-width: 1250px) {
+    .footer-link-items h2 {
+        margin-bottom: 16px;
+        color: #F5F5F5;
+        font-size: 20px;
+    }
+    
+    .footer-link-items a {
+        color: #F5F5F5;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        font-size: 15px;
+    }
+
+    .website-rights {
+        color: #F5F5F5;
+        font-size: 15px;
+    }
 }
