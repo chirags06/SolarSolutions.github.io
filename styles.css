@@ -180,6 +180,23 @@ button:hover {
         transition: all 0.3s ease 0s;
         font-size: 10px;
     }
+
+    #navbar-logo-map {
+        display: none;
+    }
+
+    .nav-links-map li {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0px 10px;
+    }
+    
+    .nav-links-map li a {
+        transition: all 0.3s ease 0s;
+        font-size: 10px;
+    }
+    
     
     button {
         padding: 10px 15px;
